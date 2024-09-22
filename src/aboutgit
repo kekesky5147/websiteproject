@@ -1,0 +1,7 @@
+<!-- 
+git init
+git add README.md
+git commit -m ""
+git branch -M main
+git remote add origin https://github.com/kekesky5147/websiteproject.git
+git push -u origin main
