@@ -9,12 +9,12 @@
 
 .header__inner{
     //양쪽정렬
+    justify-content: space-between;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     background-color: rgba(116, 99, 99, 0.364);
     backdrop-filter: blur(15px);
-    padding: 1rem;
+    padding: 4rem;
     
     .header__logo{
         font-size: 1.3rem;
@@ -30,8 +30,11 @@
         }
     }
     .header__nav{
+
+
         @media (max-width: 800px){
             display: none;
+            
 
             &.show {
                 display: block;
@@ -41,15 +44,15 @@
                     position: absolute;
                     right: 0;
                     top: 68px;
-                    background-color: rgba(116,99,99,0.1);
-                    backdrop-filter: blur(15px);
+                    background-color: rgba(116, 99, 99, 0.183);
+                    backdrop-filter: blur(50px);
                     z-index: 10000;
                     min-width: 150px;
                     padding: 20px 0;
 
                     li {
                         display: block;
-                        text-align: right;
+                        text-align: center;
 
                         a {
                             display: inline-block;
@@ -97,7 +100,8 @@
     }
 
     }
-    .header__nav__mobile{display: none;
+    .header__nav__mobile{
+        display: none;
         width: 40px;
         height: 40px;
         cursor: pointer;
