@@ -35,7 +35,7 @@ const Header = () => {
       <div className="header__inner">
         <div className="header__logo">
           <a href="/">
-            portfolio<em>Minseok Kim</em>
+            portfolio<em>by Minseok Kim</em>
           </a>
         </div>
         {/* //map을 사용하여 Nav bar의 값을 자동으로 순서대로 표기해주는 방법 위의 title과 url값을 보여줌, 위에서 값이 변경될 시 자동으로 수정됨// */}

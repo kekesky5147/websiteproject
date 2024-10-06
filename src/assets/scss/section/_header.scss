@@ -1,40 +1,29 @@
 #header {
-    // 상단 고정하기
-    position: fixed;
-    left: 0;
-    top:0;
-    width: 100%;
-    z-index: 10000in;
+    @include position-fixed;
+    z-index: 10000;
 }
-
-.header__inner{
-    //양쪽정렬
-    justify-content: space-between;
-    display: flex;
-    align-items: center;
-    background-color: rgba(116, 99, 99, 0.364);
+.header__inner {
+    @include flex-between;
+    background-color: rgba(116, 99, 99, 0.1);
     backdrop-filter: blur(15px);
     padding: 1rem;
-    
-    .header__logo{
-        font-size: 1.3rem;
+
+    .header__logo {
+        font-size: 1.5rem;
         text-align: center;
         text-transform: uppercase;
-        line-height: 0.8;
+        line-height: 1.3;
 
         em {
-            padding: 8%;
             font-size: 10px;
             display: block;
             color: var(--black200);
         }
     }
-    .header__nav{
-
+    .header__nav {
 
         @media (max-width: 800px){
             display: none;
-            
 
             &.show {
                 display: block;
@@ -44,15 +33,15 @@
                     position: absolute;
                     right: 0;
                     top: 68px;
-                    background-color: rgba(116, 99, 99, 0.183);
-                    backdrop-filter: blur(50px);
+                    background-color: rgba(116, 99, 99, 0.35);
+                    backdrop-filter: blur(15px);
                     z-index: 10000;
                     min-width: 150px;
                     padding: 20px 0;
 
                     li {
                         display: block;
-                        text-align: center;
+                        text-align: right;
 
                         a {
                             display: inline-block;
@@ -61,7 +50,6 @@
                     }
                 }
             }
-
             &.show + .header__nav__mobile span::before {
                 width: 20px;
             }
@@ -90,17 +78,14 @@
                     transform: scaleX(0);
                     transition: all 0.3s;
                 }
-                // 마우스 올리면 줄 생기는 효과만들기 // 
                 &:hover::before {
                     transform: scaleX(1);
                 }
-                // /////////////////////////////
             }
         }
     }
-
-    }
-    .header__nav__mobile{
+    
+    .header__nav__mobile {
         display: none;
         width: 40px;
         height: 40px;
@@ -140,6 +125,4 @@
             }
         }
     }
-
-
-
+} 
